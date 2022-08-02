@@ -1,0 +1,99 @@
+.galary{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-gap: 20px;
+    /* grid-auto-rows: minmax(100px, auto); */
+}
+
+.card{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .card-body{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h3{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.card-title{
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card .btn{
+    margin: 10px auto;
+}
+
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row ul{
+    list-style: none;
+}
+
+.row .nav-link{
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+footer .socialmedia{
+    display: inline-block;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+footer .socialmedia a{
+    text-decoration: none;
+    color: var(--blue);
+    font-size: 1.2em;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+footer .socialmedia a i{
+    font-size: 1.5em;
+}
