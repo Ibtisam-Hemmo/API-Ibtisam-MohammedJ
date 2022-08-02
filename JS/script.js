@@ -11,3 +11,12 @@ let fetchData = (url, callback) => {
     }
     xhr.send();
 }
+
+fetchData('https://api.ipify.org?format=json', (data) => {
+    replaceText(IP, data.ip);
+    fetchData(`http://ip-api.com/json/${data.ip}`, (locate) => {
+    replaceText(country, locate.country);
+    replaceText(city, locate.city);
+    replaceText(countryCode, locate.countryCode);
+});
+});
