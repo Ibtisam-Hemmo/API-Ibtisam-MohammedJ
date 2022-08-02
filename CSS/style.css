@@ -1,0 +1,69 @@
+
+/* Styling Header Navbar */
+
+header{
+    background-color: var(--navy);
+}
+
+header nav{
+    display: flex;
+    padding: 10px 10%;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--beige);
+}
+
+nav .logo{
+    width: 5%; 
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    font-weight: bold;
+}
+
+header ul li {
+    margin-right: 30px;
+    flex-direction: row;
+}
+
+header ul li  a{
+    text-decoration: none;
+    color: var(--beige);
+
+}
+
+header ul li a:hover{
+    color: var(--white);
+    font-size: 18px;
+
+}
+/* End Styling Header Navbar */
+
+/* Styling Address Section */
+section.address-container {
+    padding: 35px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img.map {
+    width: 40vw;
+    height: 60vh;
+    border-radius: 15px;
+}
+
+h3{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.IP{
+    text-align: left;
+    right: 0;
+    font-size: 30px;
+}
+
+/* End Styling Address Section */
