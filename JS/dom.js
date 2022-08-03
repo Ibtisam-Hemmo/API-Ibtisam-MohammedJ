@@ -1,3 +1,4 @@
+
 function getElement(input){
     return document.getElementById(input);
 }
@@ -33,10 +34,7 @@ const renderData = (place) => {
     phoneValue.href = `tel:${place.poi.phone}`
     phoneValue.innerText = 'Tel: ' + place.poi.phone;
     phone.appendChild(phoneValue)
-    const br = document.createElement('br');
-    // phone.appendChild(br)
     details.appendChild(phone)
-    
 
     let address = document.createElement('span')
     address.innerText = place.address.freeformAddress;
@@ -54,3 +52,4 @@ const renderData = (place) => {
     let galary = document.querySelector('.galary');
     galary.appendChild(card);
 }
+
