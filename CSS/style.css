@@ -131,6 +131,10 @@ h3{
     margin: 10px auto;
 }
 
+.card .card-text{
+    display: flex;
+    flex-direction: column;
+}
 
 .row{
     display: flex;

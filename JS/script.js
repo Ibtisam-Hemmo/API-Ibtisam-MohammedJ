@@ -5,7 +5,7 @@ let fetchData = (url, callback) => {
     xhr.setRequestHeader('accept', '*/*');
     xhr.onreadystatechange = () => {
         if(xhr.status === 200){
-            if (xhr.readyState === 4){
+            if(xhr.readyState === 4){
             let data = JSON.parse(xhr.responseText);
             callback(data);
         }else console.log('error');
@@ -13,7 +13,7 @@ let fetchData = (url, callback) => {
     }
     xhr.send();
 }
-        // https://api.ipify.org?format=json
+
 fetchData('https://api.ipify.org/?format=json', (data) => {
     replaceText(IP, data.ip);
     fetchData(`http://ip-api.com/json/${data.ip}`, (locate) => {
@@ -34,3 +34,17 @@ fetchData('https://api.ipify.org/?format=json', (data) => {
         });
 });
 });
+
+const fetchResturants = (countrySet) => {
+    let categorySet = 7315
+    let key = 'Zh7cgV0xS5hBRdNq2lZ8Pdzofe1RwL0w'
+    let url = `https://api.tomtom.com/search/2/search/pizza.json?countrySet=${countrySet}&key=${key}&categorySet=${categorySet}`
+    fetchData(url, (data) => {
+        count.innerText = data.summary.numResults
+        data.results.forEach(place => {
+            renderData(place);
+        })
+    })
+}
+
+fetchResturants('USA');
