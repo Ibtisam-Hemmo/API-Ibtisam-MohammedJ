@@ -3,6 +3,10 @@ function getElement(input) {
     return document.getElementById(input);
 }
 
+function createElement(input) {
+    return document.createElement(input);
+}
+
 function replaceText(element, text) {
     element.innerText = text;
 }
@@ -15,60 +19,42 @@ const timeZone = getElement('zone');
 
 
 const renderData = (place) => {
-    let galary = document.querySelector('#galary');
-
-    let card = document.createElement('div');
+    let galary = getElement('galary');
+    let card = createElement('div');
     card.classList.add('card');
-    let cardbody = document.createElement('div');
+    let cardbody = createElement('div');
     cardbody.classList.add('card-body');
     card.appendChild(cardbody);
 
-    let frame = document.createElement('iframe');
+    let frame = createElement('iframe');
     frame.src = place.poi.url;
     cardbody.appendChild(frame);
 
-    let title = document.createElement('h5');
-    title.classList.add('card-title')
-    title.textContent = place.poi.name
+    let title = createElement('h5');
+    title.classList.add('card-title');
+    replaceText(title, place.poi.name);
     cardbody.appendChild(title)
 
-    let details = document.createElement('p');
+    let details = createElement('p');
     details.classList.add('card-text')
 
-    let phone = document.createElement('span')
-    let phoneValue = document.createElement('a')
+    let phone = createElement('span')
+    let phoneValue = createElement('a')
     phoneValue.href = `tel:${place.poi.phone}`
-    phoneValue.innerText = 'Tel: ' + place.poi.phone;
+    replaceText(phoneValue, `Tel: ${place.poi.phone}` );
     phone.appendChild(phoneValue)
     details.appendChild(phone)
 
-    let address = document.createElement('span')
-    address.innerText = place.address.freeformAddress;
+    let address = createElement('span')
+    replaceText(address, place.address.freeformAddress);
     details.appendChild(address)
-
-
     cardbody.appendChild(details);
 
-    let link = document.createElement('a');
-    link.innerText = 'View Site';
+    let link = createElement('a');
+    replaceText(link, 'View Site');
     link.classList.add('btn');
     link.href = '//' + place.poi.url;
     cardbody.appendChild(link);
 
     galary.appendChild(card);
-}
-
-const fetchResturants = (countrySet, limit, callback) => {
-    let categorySet = 7315;
-    let key = 'Zh7cgV0xS5hBRdNq2lZ8Pdzofe1RwL0w'
-    let url = `https://api.tomtom.com/search/2/search/pizza.json?countrySet=${countrySet}&key=${key}&categorySet=${categorySet}&limit=${limit}`
-    fetchData(url, (data) => {
-        count.innerText = data.summary.numResults
-        let galary = document.querySelector('#galary');
-        galary.innerHTML = '';
-        data.results.forEach(place => {
-            renderData(place);
-        })
-        if(callback) callback()
-    })
 }

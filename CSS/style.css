@@ -31,7 +31,7 @@ header ul li {
 header ul li  a{
     text-decoration: none;
     color: var(--beige);
-
+    font-size: 18px;
 }
 
 header ul li a:hover{
@@ -41,12 +41,6 @@ header ul li a:hover{
 }
 /* End Styling Header Navbar */
 
-#map {
-    height: 350px;
-    width: 50%;
-    border-radius: 10px;
-}
-
 /* Styling Address Section */
 section.address-container {
     padding: 35px 10%;
@@ -55,6 +49,11 @@ section.address-container {
     align-items: center;
 }
 
+#map {
+    height: 350px;
+    width: 50%;
+    border-radius: 10px;
+}
 .address {
     width: 40vw;
     display: flex;
@@ -95,9 +94,9 @@ h2 span{
 }
 
 h2:hover{
-    /* text-transform: uppercase; */
     margin-left: 15px;
 }
+
 #map {
     height: 70vh;
     width: 60vw;
@@ -105,13 +104,14 @@ h2:hover{
 }
 
 #map:hover {
-    /* height: 70vh; */
     width: 65vw;
     border-radius: 15px;
     box-shadow: 0 0  30px var(--orange);
 }
-
 /* End Styling Address Section */
+
+
+/* Styling Cards Section */
 
 #galary{
     width: 100%;
@@ -126,11 +126,8 @@ h2:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
     border-radius: 10px;
-    /* cursor: pointer; */
     user-select: none;
-    /* box-shadow: 1px 1px 5px rgb(0 0 0 / 20%); */
     border: solid 2px var(--beige);
     padding: 25px;
 }
@@ -172,7 +169,6 @@ a {
     font-size: 20px;
     margin-bottom: 10px;
     font-weight: normal;
-    /* break-after: column; */
 }
 
 h3{
@@ -197,6 +193,8 @@ span#count {
     font-size: 20px;
     margin-left: 20px;
 }
+
+/* Styling Contacts Section and footer */
 
 .row{
     display: flex;
@@ -239,8 +237,6 @@ footer .socialmedia a{
 footer .socialmedia a i{
     font-size: 1.5em;
 }
-
-/* Styling Contacts Section and footer */
 
 .footer {
     padding: 30px 70px;

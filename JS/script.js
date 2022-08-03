@@ -16,7 +16,6 @@ let fetchData = (url, callback) => {
 
 fetchData('https://api.ipify.org/?format=json', (data) => {
     replaceText(IP, data.ip);
-
     fetchData(`http://ip-api.com/json/${data.ip}`, (locate) => {
         replaceText(country, locate.country);
         replaceText(city, locate.city);
@@ -40,6 +39,23 @@ fetchData('https://api.ipify.org/?format=json', (data) => {
         })
     });
 });
+
+
+const fetchResturants = (countrySet, limit, callback) => {
+    let categorySet = 7315;
+    let key = 'Zh7cgV0xS5hBRdNq2lZ8Pdzofe1RwL0w'
+    let url = `https://api.tomtom.com/search/2/search/pizza.json?countrySet=${countrySet}&key=${key}&categorySet=${categorySet}&limit=${limit}`
+    fetchData(url, (data) => {
+        count.innerText = data.summary.numResults
+        let galary = document.querySelector('#galary');
+        galary.innerHTML = '';
+        data.results.forEach(place => {
+            renderData(place);
+        })
+        if(callback) callback()
+    })
+}
+
 
 rangeLimit.oninput = (e) => {
     rangeValue.innerText = (e.target.value);
