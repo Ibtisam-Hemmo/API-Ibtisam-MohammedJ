@@ -11,6 +11,8 @@ const IP = getElement('IP');
 const country = getElement('country');
 const city = getElement('city');
 const countryCode = getElement('code');
+const timeZone = getElement('zone');
+
 
 const renderData = (place) => {
     let card = document.createElement('div');
@@ -50,3 +52,4 @@ const renderData = (place) => {
     let galary = document.querySelector('.galary');
     galary.appendChild(card);
 }
+
