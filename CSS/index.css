@@ -1,0 +1,83 @@
+/* Styling Landing Page located in index.js */
+
+main{
+    display: flex;
+    height: 100vh;
+}
+
+.index-img{
+    width:100vh;
+    margin-top:100px;
+    margin-left: 50px;
+}
+
+.container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.headline{
+    font-size: 40px;
+    line-height:55px;
+    font-family: 'Courgette','Poppins','Times New Roman', Times, serif;
+    color: var(--navy);
+    margin-bottom: 20px;
+
+}
+
+.btn-in{
+    width: 210px;
+    padding: 15px;
+    background-color: #6c63ff;
+    color: var(--white);
+    border: none;
+    border-radius: 4%;
+    margin-top: 30px;
+}
+
+.btn-in:hover{
+    background-color: var(--orange);
+    transform:scale(1.1);
+    transition: all 0.3s;
+    cursor: pointer;
+    color: #000;
+}
+
+a.locate {
+    text-decoration: none;
+    color: var(--white);
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+/* End Styling Landing page */
+
+
+/* Responsive Landing Page */
+
+@media (max-width:915px) {
+
+    body { 
+        background: url(https://cdn.wallpapersafari.com/33/94/oBgCEe.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    img{
+        display:none;
+    }
+
+    .container{
+        width:100%;
+    }
+    
+    .btn-signin {
+        margin-top: 142px;
+    }
+}
+
+/* End Responsive Landing Page */
