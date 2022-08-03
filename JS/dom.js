@@ -1,3 +1,4 @@
+
 function getElement(input){
     return document.getElementById(input);
 }

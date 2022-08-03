@@ -41,6 +41,12 @@ header ul li a:hover{
 }
 /* End Styling Header Navbar */
 
+#map {
+    height: 350px;
+    width: 50%;
+    border-radius: 10px;
+}
+
 /* Styling Address Section */
 section.address-container {
     padding: 35px 10%;
@@ -55,10 +61,9 @@ img.map {
     border-radius: 15px;
 }
 
-h3{
-    margin-top: 20px;
-    font-size: 20px;
-}
+/* span, h3{
+    
+} */
 
 .IP{
     text-align: left;
@@ -111,6 +116,8 @@ h3{
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 0;
+    margin-top: 50px;
+    font-size: 20px;
 }
 
 .card-title{
@@ -166,3 +173,85 @@ footer .socialmedia a{
 footer .socialmedia a i{
     font-size: 1.5em;
 }
+
+/* Styling Contacts Section and footer */
+
+.footer {
+    padding: 30px 70px;
+    background-color: var(--second-light-pink);
+}
+
+.footer .boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer .boxes .box h3 {
+    font-size: 20px;
+    color: var(--orange);
+    padding: 10px 10px
+}
+
+.footer .boxes .box a {
+    display: block;
+    padding: .5rem 0;
+    text-decoration: none;
+    color: var(--navy);
+}
+
+.footer .boxes .box a i {
+    color: var(--orange);
+    padding-right: .5rem;
+}
+
+.footer .boxes .box a:hover i {
+    color: var(--beige);
+    padding-right: 1rem;
+    font-size:1.5rem;
+}
+
+.footer .contact {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .contact i {
+    width: 50px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--navy);
+    font-size: 2rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+.footer .contact i:hover {
+    font-size: 2.8rem;
+    color: var(--beige);
+}
+/* End Styling Contact Section */
+
+/* Styling Footer */
+footer{
+    background-color: var(--navy);
+    text-align: center;
+    font-size: 30px;
+    padding: 15px 30px 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-up{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+}
+/* End Styling Footer */

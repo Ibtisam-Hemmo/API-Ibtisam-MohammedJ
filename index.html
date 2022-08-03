@@ -8,12 +8,12 @@
     <link rel="shortcut icon" href="./Assets/logo-icon.png" type="image/x-icon">
     <link rel="stylesheet" href="CSS/global.css">
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <title>Locating places</title>
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <nav aria-label="Navbav for header" class="navbar">
             <img src="./Assets/logo-icon.png" alt="Locating LOGO" class="logo">
             <ul>
@@ -30,16 +30,20 @@
         </nav>
     </header>
 
-        <section class="address-container">
-            <!-- adding map using location -->
-            <img src="./Assets/map.jpg" alt="Map" class="map"> 
-            <div class="address">
-                <h1 class="IP">Your IP Address is : <span id="IP"></span></h1> 
-                <h3 >Your Country is : <span id="country"></span> </h3>
-                <h3 >Your city is : <span id="city"></span> </h3>
-                <h3 >Your country code is : <span id="code"></span> </h3>
-            </div>
-        </section>
+
+    
+
+    <section class="address-container">
+        <!-- adding map using location -->
+        <!-- <img src="./Assets/map.jpg" alt="Map" class="map">  -->
+        <div id="map"class="map"></div>
+        <div class="address">
+            <h1 class="IP">Your IP Address is : <span id="IP"></span></h1> 
+            <h3 >Your Country is : <span id="country"></span> </h3>
+            <h3 >Your city is : <span id="city"></span> </h3>
+            <h3 >Your country code is : <span id="code"></span> </h3>
+        </div>
+    </section>
     <section class="container">
         <h3>
             Results <span id="count">0</span>
@@ -88,43 +92,51 @@
         </h3>
     </section>
 
-    <footer class="container">
-        <div class="row">
-            <ul>
-                <h3>
-                    Site Name
-                </h3>
-                <ul class="socialmedia">
-                    <li><a href="facebook.com"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="pinterest.com"><i class="fa-brands fa-pinterest"></i></a></li>
-                </ul>
-            </ul>
-            <ul>
-                <li>
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </footer>
+    <section class="footer">
+        <div class="boxes">
+            <div class="box">
+                <h3>Our Locations</h3>
+                <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>Palestine</a>
+                <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>Jerusalem</a>
+                <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>Indonesia</a>
+                <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>Switzerland</a>
+            </div>
 
+            <div class="box">
+                <h3>More Information</h3>
+                <a href="#"><i class="fa fa-link" aria-hidden="true"></i>Account Info</a>
+                <a href="#"><i class="fa fa-link" aria-hidden="true"></i>Privacy Policy</a>
+                <a href="#"><i class="fa fa-link" aria-hidden="true"></i>Payment Method</a>
+                <a href="#"><i class="fa fa-link" aria-hidden="true"></i>Our Services</a>
+            </div>
+
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>+ 123-456-789-123-456</a>
+                <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>+ 123-456-789-123-456</a>
+                <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></i>E-Commerce@gmail.com</a>
+                <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></i>ibtisamhemmo@gmail.com</a>
+            </div>
+        </div>
+
+        <div class="contact">
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+        </div>
+    </section>
+            
+    <footer>
+        <p>Development by Ibtisam Hemmo 2022</p>
+        <button class="btn btn-up" onclick="location.href='#header'">
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </button>
+    </footer>
+    <script src="https://use.fontawesome.com/cf3935a44e.js"></script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn5aRVOFC6eIF6oVA2VnqfFz6GuMfv8qc">
+    </script>
     <script src="JS/dom.js"></script>
     <script src="JS/script.js"></script>
 </body>
