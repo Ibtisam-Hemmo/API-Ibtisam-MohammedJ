@@ -49,7 +49,7 @@ const renderData = (place) => {
     link.href = '/' + place.poi.url;
     cardbody.appendChild(link);
 
-    let galary = document.querySelector('.galary');
+    let galary = document.querySelector('#galary');
     galary.appendChild(card);
 }
 
