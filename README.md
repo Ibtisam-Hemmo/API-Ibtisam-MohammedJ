@@ -1,4 +1,4 @@
-# Locater :earth_africa:
+# Locator :earth_africa:
  This is a simple web app for those who like to get their nearby restaurants. You can pick your favorite retaurant from the cards shown in the page ,and get all the details that you need.
  
 ## Used Technologies :earth_africa:
