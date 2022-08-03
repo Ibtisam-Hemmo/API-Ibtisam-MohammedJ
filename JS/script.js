@@ -35,7 +35,9 @@ fetchData('https://api.ipify.org/?format=json', (data) => {
             title: 'Place the marker for your location!', //The title on hover to display
             draggable: true //this makes it drag and drop
         });
-        fetchResturants(locate.countryCode, 50)
+        fetchResturants(locate.countryCode, 50, () => {
+            spineer.style.transform= 'translateX(100%)'
+        })
     });
 });
 

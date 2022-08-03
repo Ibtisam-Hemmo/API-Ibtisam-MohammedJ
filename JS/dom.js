@@ -58,7 +58,7 @@ const renderData = (place) => {
     galary.appendChild(card);
 }
 
-const fetchResturants = (countrySet, limit) => {
+const fetchResturants = (countrySet, limit, callback) => {
     let categorySet = 7315;
     let key = 'Zh7cgV0xS5hBRdNq2lZ8Pdzofe1RwL0w'
     let url = `https://api.tomtom.com/search/2/search/pizza.json?countrySet=${countrySet}&key=${key}&categorySet=${categorySet}&limit=${limit}`
@@ -69,5 +69,6 @@ const fetchResturants = (countrySet, limit) => {
         data.results.forEach(place => {
             renderData(place);
         })
+        if(callback) callback()
     })
 }
