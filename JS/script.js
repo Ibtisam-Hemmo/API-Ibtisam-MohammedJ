@@ -45,6 +45,3 @@ rangeLimit.oninput = (e) => {
     rangeValue.innerText = (e.target.value);
     fetchResturants(code.textContent, e.target.value)
 }
-
-
-

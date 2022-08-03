@@ -15,7 +15,7 @@ const timeZone = getElement('zone');
 
 
 const renderData = (place) => {
-    let galary = document.querySelector('.galary');
+    let galary = document.querySelector('#galary');
 
     let card = document.createElement('div');
     card.classList.add('card');
@@ -64,7 +64,7 @@ const fetchResturants = (countrySet, limit, callback) => {
     let url = `https://api.tomtom.com/search/2/search/pizza.json?countrySet=${countrySet}&key=${key}&categorySet=${categorySet}&limit=${limit}`
     fetchData(url, (data) => {
         count.innerText = data.summary.numResults
-        let galary = document.querySelector('.galary');
+        let galary = document.querySelector('#galary');
         galary.innerHTML = '';
         data.results.forEach(place => {
             renderData(place);
