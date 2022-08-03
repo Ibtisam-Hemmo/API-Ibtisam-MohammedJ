@@ -1,9 +1,9 @@
 
-function getElement(input){
+function getElement(input) {
     return document.getElementById(input);
 }
 
-function replaceText(element, text){
+function replaceText(element, text) {
     element.innerText = text;
 }
 
@@ -15,11 +15,17 @@ const timeZone = getElement('zone');
 
 
 const renderData = (place) => {
+    let galary = document.querySelector('.galary');
+
     let card = document.createElement('div');
     card.classList.add('card');
     let cardbody = document.createElement('div');
     cardbody.classList.add('card-body');
     card.appendChild(cardbody);
+
+    let frame = document.createElement('iframe');
+    frame.src = place.poi.url;
+    cardbody.appendChild(frame);
 
     let title = document.createElement('h5');
     title.classList.add('card-title')
@@ -46,10 +52,22 @@ const renderData = (place) => {
     let link = document.createElement('a');
     link.innerText = 'View Site';
     link.classList.add('btn');
-    link.href = '/' + place.poi.url;
+    link.href = '//' + place.poi.url;
     cardbody.appendChild(link);
 
-    let galary = document.querySelector('.galary');
     galary.appendChild(card);
 }
 
+const fetchResturants = (countrySet, limit) => {
+    let categorySet = 7315;
+    let key = 'Zh7cgV0xS5hBRdNq2lZ8Pdzofe1RwL0w'
+    let url = `https://api.tomtom.com/search/2/search/pizza.json?countrySet=${countrySet}&key=${key}&categorySet=${categorySet}&limit=${limit}`
+    fetchData(url, (data) => {
+        count.innerText = data.summary.numResults
+        let galary = document.querySelector('.galary');
+        galary.innerHTML = '';
+        data.results.forEach(place => {
+            renderData(place);
+        })
+    })
+}
