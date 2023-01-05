@@ -1,6 +1,8 @@
 # Locator :earth_africa:
  This is a simple web app for those who like to get their nearby restaurants. You can pick your favorite retaurant from the cards shown in the page ,and get all the details that you need.
  
+## [Live Link](https://places-locator.netlify.app/)
+
 ## Used Technologies :earth_africa:
 :curly_loop: **HTML5** <br>
 :curly_loop: **CSS**<br>
@@ -13,6 +15,7 @@
 **[Adress API](http://ip-api.com/json/YourIP)** <br>
 **[Places API](https://api.tomtom.com/search/2/search/pizza.json)**<br>
 **[Google Map API](https://maps.googleapis.com/maps/api/js)**<br>
+
 
  
 ## User Journey :earth_africa:
